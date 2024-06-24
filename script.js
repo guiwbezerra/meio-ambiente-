@@ -4,91 +4,95 @@ const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
+// Definição da história e perguntas sobre meio ambiente
 const perguntas = [
     {
-        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
+        enunciado: "Você cresceu em uma cidade rodeada por natureza e sempre apreciou suas belezas naturais. Como você se sente sobre a atual situação ambiental?",
         alternativas: [
             {
-                texto: "Qual é a principal causa do aquecimento global?!",
-                afirmacao: "interrogação"
+                texto: "Estou muito preocupado com as mudanças climáticas e a perda de biodiversidade.",
+                afirmacao: "Preocupação com o futuro do planeta."
             },
             {
-                texto: "Qual é o maior contribuinte para a poluição dos oceanos?",
-                afirmacao: "interrogação"
+                texto: "Acredito que a natureza é resiliente e que os problemas ambientais se resolverão sozinhos.",
+                afirmacao: "Confiança na capacidade da natureza de se recuperar."
             }
         ]
     },
     {
-        enunciado: "Com a descoberta desta tecnologia, chamada Inteligência Artificial, uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
+        enunciado: "Você está planejando suas férias. Como você escolhe o destino?",
         alternativas: [
             {
-                texto: "A) Emissões de gases de efeito estufa"
+                texto: "Prefiro destinos próximos à natureza, como parques nacionais e praias limpas.",
+                afirmacao: "Preferência por destinos ecológicos e sustentáveis."
             },
             {
-                texto: "B) Desmatamento.",
-                afirmacao: "afirmação"
+                texto: "Escolho destinos urbanos movimentados, pois são mais excitantes e oferecem mais opções de entretenimento.",
+                afirmacao: "Preferência por destinos urbanos e movimentados."
             }
         ]
     },
     {
-        enunciado: "Após a elaboração do trabalho escrito, a professora realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
+        enunciado: "Ao fazer compras, como você escolhe produtos?",
         alternativas: [
             {
-                texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-                afirmacao: "afirmação"
+                texto: "Prefiro produtos orgânicos e locais para apoiar a agricultura sustentável.",
+                afirmacao: "Apoio ao consumo consciente e sustentável."
             },
             {
-                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
-                afirmacao: "afirmação"
+                texto: "Escolho produtos com base no preço e na conveniência, sem considerar muito o impacto ambiental.",
+                afirmacao: "Preferência por conveniência e preço."
             }
         ]
     },
     {
-        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
+        enunciado: "Você é convidado para um protesto ambiental. Qual é a sua reação?",
         alternativas: [
             {
-                texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
-                afirmacao: "afirmação"
+                texto: "Participo ativamente para lutar por políticas ambientais mais rigorosas.",
+                afirmacao: "Engajamento em causas ambientais e ativismo."
             },
             {
-                texto: "Criar uma imagem utilizando um gerador de imagem de IA.",
-                afirmacao: "afirmação"
+                texto: "Prefiro não me envolver em protestos e busco apoiar causas ambientais de outras formas.",
+                afirmacao: "Apoio a causas ambientais, mas com métodos diferentes."
             }
         ]
     },
     {
-        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda da IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz? ",
+        enunciado: "Você está planejando seu futuro profissional. Como você considera o impacto ambiental na sua carreira?",
         alternativas: [
             {
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-                afirmacao: "afirmação"
+                texto: "Busco carreiras que possam contribuir para a preservação ambiental, como conservação, engenharia ambiental ou energias renováveis.",
+                afirmacao: "Prioridade no impacto ambiental positivo da carreira."
             },
             {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-                afirmacao: "afirmação"
+                texto: "Escolho carreiras com base no potencial de ganhos e oportunidades de crescimento, independentemente do impacto ambiental.",
+                afirmacao: "Preferência por carreiras tradicionais sem foco ambiental específico."
             }
         ]
     },
 ];
-
 
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 
 function mostraPergunta() {
-    if (atual >= perguntas.length) {
-        mostraResultado();
-        return;
+    if (atual < perguntas.length) {
+        perguntaAtual = perguntas[atual];
+        caixaPerguntas.textContent = perguntaAtual.enunciado;
+        mostraAlternativas();
+    } else {
+        // Fim das perguntas, exibir resultado final ou próxima ação
+        exibeResultadoFinal();
     }
-    perguntaAtual = perguntas[atual];
-    caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent = "";
-    mostraAlternativas();
 }
 
-function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativas) {
+function mostraAlternativas() {
+    // Limpa as alternativas anteriores
+    caixaAlternativas.innerHTML = '';
+
+    for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
         botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
@@ -97,16 +101,18 @@ function mostraAlternativas(){
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = opcaoSelecionada.afirmacao;
-    historiaFinal += afirmacoes + " ";
+    historiaFinal += `${opcaoSelecionada.afirmacao} `;
     atual++;
     mostraPergunta();
 }
 
-function mostraResultado() {
-    caixaPerguntas.textContent = "Em 2049...";
-    textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = "";
+function exibeResultadoFinal() {
+    // Aqui você pode exibir o resultado final ou realizar a próxima ação
+    caixaPerguntas.textContent = "Quiz concluído! Veja seu resultado:";
+    caixaAlternativas.style.display = 'none'; // Esconder caixa de alternativas
+    textoResultado.textContent = `História final: ${historiaFinal}`;
+    caixaResultado.style.display = 'block'; // Exibir caixa de resultado
 }
 
+// Iniciar o quiz mostrando a primeira pergunta
 mostraPergunta();
