@@ -1,126 +1,100 @@
 export const perguntas = [
     {
-        enunciado: "Você está participando de um projeto escolar sobre a poluição dos rios. Qual é a sua primeira reação ao descobrir que um rio local está altamente poluído?",
+        enunciado: "Após uma aula sobre poluição de rios, você encontra um relatório que descreve o impacto das atividades humanas na qualidade da água dos rios. Qual é o seu primeiro pensamento?",
         alternativas: [
             {
-                texto: "Isso é muito preocupante!",
+                texto: "Isso é preocupante!",
                 afirmacao: [
-                    "Você fica alarmado com a gravidade da poluição e o impacto ambiental.",
-                    "Você sente a necessidade urgente de tomar medidas para limpar e proteger o rio."
-                ],
-                proxima: 1,
+                    "Ficou alarmado ao perceber a gravidade da poluição dos rios.",
+                    "Sentiu que a poluição está avançando rapidamente e pode ter efeitos devastadores."
+                ]
             },
             {
-                texto: "Isso é uma oportunidade de aprendizado.",
+                texto: "Isso é uma oportunidade para ação!",
                 afirmacao: [
-                    "Você vê a situação como uma chance de aprender mais sobre poluição e como combatê-la.",
-                    "Você acredita que esse projeto pode ajudar a aumentar a conscientização sobre a preservação dos rios."
-                ],
-                proxima: 2,
-            },
+                    "Quis saber como contribuir para a conservação dos rios.",
+                    "Procurou informações sobre projetos e iniciativas para limpar e proteger os rios."
+                ]
+            }
         ]
     },
     {
-        enunciado: "Sua escola está organizando um evento para promover a limpeza de um lago poluído. Como você decide contribuir?",
+        enunciado: "Depois de aprender sobre a poluição dos rios, seu professor pede que você escreva um trabalho sobre as causas e consequências da poluição hídrica. Qual atitude você toma?",
         alternativas: [
             {
-                texto: "Participa ativamente do evento de limpeza e encoraja outros a se envolverem.",
+                texto: "Utiliza uma ferramenta de busca na internet para encontrar informações e explicações sobre o impacto da poluição nos rios.",
                 afirmacao: [
-                    "Você acredita que a ação direta é essencial para melhorar a qualidade do lago.",
-                    "Você se sente motivado a incentivar a comunidade a participar da limpeza e preservação."
-                ],
-                proxima: 3,
+                    "Conseguiu encontrar informações relevantes e detalhadas sobre a poluição hídrica.",
+                    "Percebeu que as ferramentas de busca podem fornecer dados atualizados e especializados sobre o tema.",
+                    "Observou que essas ferramentas ajudam a simplificar conceitos complexos e facilitar a compreensão."
+                ]
             },
             {
-                texto: "Organiza uma campanha de conscientização para destacar a importância da preservação do lago.",
+                texto: "Escreve o trabalho com base nas conversas com colegas, algumas pesquisas na internet e seu conhecimento pessoal sobre o tema.",
                 afirmacao: [
-                    "Você acha que aumentar a conscientização pode ter um impacto mais duradouro na preservação do lago.",
-                    "Você usa a campanha para educar as pessoas sobre os problemas e soluções para a poluição de lagos."
-                ],
-                proxima: 4,
-            },
+                    "Sentiu mais confortável usando recursos tradicionais para a pesquisa.",
+                    "Acreditou que métodos convencionais, embora mais demorados, são mais confiáveis.",
+                    "Teve preocupações com a privacidade e a precisão das informações geradas por ferramentas de IA."
+                ]
+            }
         ]
     },
     {
-        enunciado: "Durante uma visita a um parque nacional com vários rios e lagos, você observa muitos resíduos jogados na água. Qual é a sua abordagem para lidar com essa situação?",
+        enunciado: "Durante uma discussão em sala de aula sobre o impacto da poluição nos ecossistemas aquáticos, como você se posiciona?",
         alternativas: [
             {
-                texto: "Recolhe os resíduos e organiza uma limpeza com a ajuda de outros visitantes.",
+                texto: "Defende que medidas de proteção e restauração dos rios são essenciais para preservar a biodiversidade e melhorar a qualidade da água.",
                 afirmacao: [
-                    "Você acredita que ações diretas, como a coleta de resíduos, são importantes para manter os rios e lagos limpos.",
-                    "Você incentiva outros visitantes a ajudar e participar da limpeza."
-                ],
-                proxima: 5,
+                    "Acredita que a proteção dos rios pode criar novas oportunidades de emprego e aumentar a conscientização ambiental.",
+                    "Participa ativamente de iniciativas que promovem a restauração de habitats aquáticos e a redução da poluição."
+                ]
             },
             {
-                texto: "Relata o problema às autoridades do parque e sugere melhorias na gestão de resíduos.",
+                texto: "Preocupa-se com o impacto da poluição sobre as comunidades locais e defende a importância de políticas públicas mais rígidas.",
                 afirmacao: [
-                    "Você acredita que envolver as autoridades é crucial para garantir uma solução a longo prazo para a poluição.",
-                    "Você sugere políticas e práticas mais eficazes para a gestão de resíduos no parque."
-                ],
-                proxima: 6,
-            },
+                    "Sua preocupação levou à criação de um grupo comunitário para discutir e implementar soluções contra a poluição dos rios.",
+                    "Trabalha para promover legislações que protejam as áreas afetadas e garantam a qualidade da água."
+                ]
+            }
         ]
     },
     {
-        enunciado: "Você está discutindo com colegas sobre como as mudanças climáticas afetam os rios e lagos. Qual é o seu ponto de vista?",
+        enunciado: "Ao final da discussão, você precisa criar uma imagem que represente a importância da preservação dos rios. Qual é a sua abordagem?",
         alternativas: [
             {
-                texto: "As mudanças climáticas têm um impacto devastador e precisamos agir rapidamente para proteger os ecossistemas aquáticos.",
+                texto: "Criar uma imagem utilizando uma plataforma de design tradicional, como o Paint.",
                 afirmacao: [
-                    "Você está envolvido em iniciativas para mitigar os efeitos das mudanças climáticas nos rios e lagos.",
-                    "Você promove ações urgentes para proteger os ecossistemas aquáticos dos efeitos negativos das mudanças climáticas."
-                ],
-                proxima: 7,
+                    "Observou que muitas pessoas ainda não dominam as ferramentas digitais e decidiu compartilhar conhecimentos sobre design básico.",
+                    "Ainda acredita que as técnicas tradicionais de design são mais eficazes para transmitir sua mensagem e está incentivando a pintura manual."
+                ]
             },
             {
-                texto: "Podemos adaptar e encontrar soluções para minimizar os impactos das mudanças climáticas nos rios e lagos.",
+                texto: "Criar uma imagem utilizando um gerador de imagens de IA.",
                 afirmacao: [
-                    "Você acredita que a adaptação e inovação são chaves para lidar com os desafios das mudanças climáticas.",
-                    "Você está trabalhando em soluções práticas e adaptativas para preservar os rios e lagos."
-                ],
-                proxima: 8,
-            },
+                    "Usou o gerador de imagens para criar representações visuais impactantes sobre a preservação dos rios e agora ensina outros a utilizar essas ferramentas.",
+                    "Compartilhou as imagens em redes sociais para aumentar a conscientização sobre a importância da preservação dos rios.",
+                    "Percebeu que a IA pode ajudar a criar visões criativas e eficazes para promover a proteção ambiental."
+                ]
+            }
         ]
     },
     {
-        enunciado: "Após um seminário sobre a importância da vegetação ao redor de rios e lagos, como você vê a relação entre plantas e a saúde das águas?",
+        enunciado: "Você está trabalhando em grupo em um projeto sobre a poluição dos rios, mas uma pessoa do grupo utilizou a IA para gerar o conteúdo, resultando em um trabalho que parece repetitivo. O que você faz?",
         alternativas: [
             {
-                texto: "A vegetação é essencial para a filtragem de poluentes e a preservação da qualidade da água.",
+                texto: "Usar a IA para gerar conteúdo pode ser uma maneira eficiente de colaborar, então não vejo problema em usar o texto gerado.",
                 afirmacao: [
-                    "Você apoia projetos de replantio e recuperação de áreas vegetais ao redor de corpos d'água.",
-                    "Você vê a vegetação como uma parte fundamental na proteção da qualidade da água e dos habitats aquáticos."
-                ],
-                proxima: 7,
+                    "Descobriu que a dependência excessiva da IA pode levar à falta de originalidade e profundidade no trabalho.",
+                    "Reconheceu a importância de combinar a IA com o esforço humano para obter melhores resultados."
+                ]
             },
             {
-                texto: "A vegetação pode ajudar, mas precisamos de outras abordagens para resolver problemas de poluição.",
+                texto: "Embora a IA seja uma ferramenta avançada, é importante revisar e adicionar perspectivas pessoais para garantir a qualidade e a autenticidade do trabalho.",
                 afirmacao: [
-                    "Você acredita que, embora importante, a vegetação sozinha não é suficiente para resolver todos os problemas ambientais.",
-                    "Você defende uma abordagem multifacetada que combine vegetação com outras práticas de preservação."
-                ],
-                proxima: 8,
-            },
-        ]
-    },
-    {
-        enunciado: "Você tem a tarefa de criar um projeto de arte para um concurso sobre a beleza dos rios e lagos. Como você o aborda?",
-        alternativas: [
-            {
-                texto: "Cria uma pintura detalhada que destaca a beleza natural e a importância dos rios e lagos.",
-                afirmacao: [
-                    "Você quer transmitir a beleza e a fragilidade dos ecossistemas aquáticos por meio da arte.",
-                    "Você acredita que mostrar a beleza natural pode aumentar a conscientização e o apreço pela preservação."
-                ],
-            },
-            {
-                texto: "Usa uma ferramenta digital para criar uma imagem que ilustra os desafios e as soluções para a preservação dos rios e lagos.",
-                afirmacao: [
-                    "Você utiliza a arte digital para comunicar problemas e soluções de maneira eficaz.",
-                    "Você acredita que a arte digital pode alcançar um público mais amplo e engajar mais pessoas na causa."
-                ],
-            },
+                    "Reconheceu que a IA pode fornecer uma base, mas a contribuição humana é essencial para refletir as verdadeiras ideias e preocupações sobre a poluição dos rios.",
+                    "Trabalhou para enriquecer o conteúdo com informações adicionais e insights pessoais, garantindo um trabalho mais completo e original."
+                ]
+            }
         ]
     }
 ];
